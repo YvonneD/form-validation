@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-validation</title>
+    <link rel="icon" href="https://lh3.googleusercontent.com/ogw/ADGmqu-t4SjxY4Ie8AO20govlZr2aRd8b66T9sL48xyx=s32-c-mo" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>sign up</h1>
+        <!--form-->
+        <form action="" id="form">
+            <!--full name-->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="full name" name="name" required minlength="3" maxlength="100">
+            </div>
+            <!--phone number-->
+            <div class="form-group">
+                <label for="phone">phone</label>
+                <input type="tel" id="phone"  name="phone"placeholder="888-888-8888" required pattern="[0-9]{10}">
+            </div>
+            <!--email-->
+            <div class="form-group">
+                <label for="email">email address</label>
+                <input type="email" id="email"  name="email"placeholder="email@address.com" required>
+            </div>
+            <!--website url-->
+            <div class="form-group">
+                <label for="website">website</label>
+                <input type="url" id="website"  name="website"placeholder="https://yvonnedi.blogspot.com/" required>
+            </div>
+            <!--password-->
+            <div class="form-group">
+                <label for="password">password</label>
+                <input type="password" id="password1"  placeholder="create password(min 8 characters)" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="please include at least 1 uppercase,1 lowercase, and 1 number">
+            </div>
+            <!--confirm password-->
+            <div class="form-group">
+                <label for="password2">password2</label>
+                <input type="password" id="password2" name="password" placeholder="confirm password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <!--error/success message-->
+        <div class="message-container">
+            <h3 id="message">welcome to join us</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
